@@ -9,23 +9,33 @@
 /* Begin PBXBuildFile section */
 		66205AED249A63BC0010464E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66205AEC249A63BC0010464E /* AppDelegate.swift */; };
 		66205AEF249A63BC0010464E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66205AEE249A63BC0010464E /* SceneDelegate.swift */; };
-		66205AF1249A63BC0010464E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66205AF0249A63BC0010464E /* ViewController.swift */; };
+		66205AF1249A63BC0010464E /* ConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66205AF0249A63BC0010464E /* ConversationViewController.swift */; };
 		66205AF4249A63BC0010464E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66205AF2249A63BC0010464E /* Main.storyboard */; };
 		66205AF7249A63BC0010464E /* Techcrus_Chat_App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 66205AF5249A63BC0010464E /* Techcrus_Chat_App.xcdatamodeld */; };
 		66205AF9249A63C10010464E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66205AF8249A63C10010464E /* Assets.xcassets */; };
 		66205AFC249A63C10010464E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66205AFA249A63C10010464E /* LaunchScreen.storyboard */; };
+		669492D224A7A53F007B1ADA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669492D124A7A53F007B1ADA /* LoginViewController.swift */; };
+		669492D424A7A57B007B1ADA /* PhotoViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669492D324A7A57B007B1ADA /* PhotoViewerViewController.swift */; };
+		669492D624A7A58A007B1ADA /* VideoViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669492D524A7A58A007B1ADA /* VideoViewerViewController.swift */; };
+		669492D824A7A5B5007B1ADA /* NewConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669492D724A7A5B5007B1ADA /* NewConversationViewController.swift */; };
+		669492DA24A7A5BE007B1ADA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669492D924A7A5BE007B1ADA /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		66205AE9249A63BC0010464E /* Techcrus-Chat-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Techcrus-Chat-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		66205AEC249A63BC0010464E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66205AEE249A63BC0010464E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		66205AF0249A63BC0010464E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		66205AF0249A63BC0010464E /* ConversationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationViewController.swift; sourceTree = "<group>"; };
 		66205AF3249A63BC0010464E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		66205AF6249A63BC0010464E /* Techcrus_Chat_App.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Techcrus_Chat_App.xcdatamodel; sourceTree = "<group>"; };
 		66205AF8249A63C10010464E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66205AFB249A63C10010464E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		66205AFD249A63C10010464E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		669492D124A7A53F007B1ADA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		669492D324A7A57B007B1ADA /* PhotoViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewerViewController.swift; sourceTree = "<group>"; };
+		669492D524A7A58A007B1ADA /* VideoViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewerViewController.swift; sourceTree = "<group>"; };
+		669492D724A7A5B5007B1ADA /* NewConversationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewConversationViewController.swift; sourceTree = "<group>"; };
+		669492D924A7A5BE007B1ADA /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +68,69 @@
 		66205AEB249A63BC0010464E /* Techcrus-Chat-App */ = {
 			isa = PBXGroup;
 			children = (
-				66205AEC249A63BC0010464E /* AppDelegate.swift */,
-				66205AEE249A63BC0010464E /* SceneDelegate.swift */,
-				66205AF0249A63BC0010464E /* ViewController.swift */,
-				66205AF2249A63BC0010464E /* Main.storyboard */,
-				66205AF8249A63C10010464E /* Assets.xcassets */,
-				66205AFA249A63C10010464E /* LaunchScreen.storyboard */,
+				669492CF24A7A3F1007B1ADA /* Resources */,
+				669492CE24A7A3E8007B1ADA /* ViewModels */,
+				669492CD24A7A3D6007B1ADA /* Models */,
+				669492CC24A7A3CD007B1ADA /* Views */,
+				669492CB24A7A3C0007B1ADA /* Controllers */,
 				66205AFD249A63C10010464E /* Info.plist */,
 				66205AF5249A63BC0010464E /* Techcrus_Chat_App.xcdatamodeld */,
 			);
 			path = "Techcrus-Chat-App";
+			sourceTree = "<group>";
+		};
+		669492CB24A7A3C0007B1ADA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				66205AF0249A63BC0010464E /* ConversationViewController.swift */,
+				669492D124A7A53F007B1ADA /* LoginViewController.swift */,
+				669492D324A7A57B007B1ADA /* PhotoViewerViewController.swift */,
+				669492D524A7A58A007B1ADA /* VideoViewerViewController.swift */,
+				669492D724A7A5B5007B1ADA /* NewConversationViewController.swift */,
+				669492D924A7A5BE007B1ADA /* ProfileViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		669492CC24A7A3CD007B1ADA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				66205AF8249A63C10010464E /* Assets.xcassets */,
+				669492D024A7A420007B1ADA /* Storyboards */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		669492CD24A7A3D6007B1ADA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		669492CE24A7A3E8007B1ADA /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		669492CF24A7A3F1007B1ADA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				66205AEC249A63BC0010464E /* AppDelegate.swift */,
+				66205AEE249A63BC0010464E /* SceneDelegate.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		669492D024A7A420007B1ADA /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				66205AF2249A63BC0010464E /* Main.storyboard */,
+				66205AFA249A63C10010464E /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,10 +204,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66205AF1249A63BC0010464E /* ViewController.swift in Sources */,
+				66205AF1249A63BC0010464E /* ConversationViewController.swift in Sources */,
+				669492D624A7A58A007B1ADA /* VideoViewerViewController.swift in Sources */,
+				669492D824A7A5B5007B1ADA /* NewConversationViewController.swift in Sources */,
 				66205AED249A63BC0010464E /* AppDelegate.swift in Sources */,
 				66205AF7249A63BC0010464E /* Techcrus_Chat_App.xcdatamodeld in Sources */,
+				669492D224A7A53F007B1ADA /* LoginViewController.swift in Sources */,
+				669492DA24A7A5BE007B1ADA /* ProfileViewController.swift in Sources */,
 				66205AEF249A63BC0010464E /* SceneDelegate.swift in Sources */,
+				669492D424A7A57B007B1ADA /* PhotoViewerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
