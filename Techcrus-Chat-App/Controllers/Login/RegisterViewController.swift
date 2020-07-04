@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class RegisterViewController: UIViewController {
     
@@ -32,7 +33,7 @@ class RegisterViewController: UIViewController {
         field.autocapitalizationType = .none
         field.autocorrectionType = .no
         field.returnKeyType = .continue
-        field.layer.cornerRadius = 12
+        field.layer.cornerRadius = 8
         field.layer.borderWidth = 1
         field.layer.borderColor = UIColor.lightGray.cgColor
         field.placeholder = "First Name"
@@ -47,7 +48,7 @@ class RegisterViewController: UIViewController {
         field.autocapitalizationType = .none
         field.autocorrectionType = .no
         field.returnKeyType = .continue
-        field.layer.cornerRadius = 12
+        field.layer.cornerRadius = 8
         field.layer.borderWidth = 1
         field.layer.borderColor = UIColor.lightGray.cgColor
         field.placeholder = "Last Name"
@@ -62,7 +63,7 @@ class RegisterViewController: UIViewController {
         field.autocapitalizationType = .none
         field.autocorrectionType = .no
         field.returnKeyType = .continue
-        field.layer.cornerRadius = 12
+        field.layer.cornerRadius = 8
         field.layer.borderWidth = 1
         field.layer.borderColor = UIColor.lightGray.cgColor
         field.placeholder = "Email Address"
@@ -77,7 +78,7 @@ class RegisterViewController: UIViewController {
         field.autocapitalizationType = .none
         field.autocorrectionType = .no
         field.returnKeyType = .done
-        field.layer.cornerRadius = 12
+        field.layer.cornerRadius = 8
         field.layer.borderWidth = 1
         field.layer.borderColor = UIColor.lightGray.cgColor
         field.placeholder = "Password"
@@ -161,14 +162,28 @@ class RegisterViewController: UIViewController {
             let lastName = lastNameField.text,
             let email = emailField.text,
             let password = passwordField.text,
-            !firstName.isEmpty,
-            !lastName.isEmpty,
-            !email.isEmpty,
-            !password.isEmpty,
-            password.count >= 6 else {
-                alertUserLoginError()
+                !firstName.isEmpty,
+                !lastName.isEmpty,
+                !email.isEmpty,
+                !password.isEmpty,
+                 password.count >= 6 else {
+                    alertUserLoginError()
+                 return
+            }
+        
+        //FireBase Login
+        
+        FirebaseAuth.Auth.auth().createUser(withEmail: email, password: password, completion: { authResults, error in
+            
+            guard let results = authResults, error == nil else {
+                print("Error creating user")
                 return
-        }
+            }
+            
+            let user = results.user
+            print("Created user \(user)")
+            
+        })
     }
     
     func alertUserLoginError() {

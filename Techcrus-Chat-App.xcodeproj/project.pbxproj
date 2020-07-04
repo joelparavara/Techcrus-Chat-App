@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,9 +21,13 @@
 		669492DA24A7A5BE007B1ADA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669492D924A7A5BE007B1ADA /* ProfileViewController.swift */; };
 		669492DE24A7AF0B007B1ADA /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669492DD24A7AF0B007B1ADA /* RegisterViewController.swift */; };
 		669492E024A7B6E9007B1ADA /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669492DF24A7B6E9007B1ADA /* Extensions.swift */; };
+		66FB478F24B0EE4900B082C6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 66FB478E24B0EE4800B082C6 /* GoogleService-Info.plist */; };
+		CB3EFDD09193554BB8CA492F /* Pods_Techcrus_Chat_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18C0D5DA5FC80102FDB031BE /* Pods_Techcrus_Chat_App.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18C0D5DA5FC80102FDB031BE /* Pods_Techcrus_Chat_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Techcrus_Chat_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		215C80633103CAEFF8092EF5 /* Pods-Techcrus-Chat-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Techcrus-Chat-App.release.xcconfig"; path = "Target Support Files/Pods-Techcrus-Chat-App/Pods-Techcrus-Chat-App.release.xcconfig"; sourceTree = "<group>"; };
 		66205AE9249A63BC0010464E /* Techcrus-Chat-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Techcrus-Chat-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		66205AEC249A63BC0010464E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66205AEE249A63BC0010464E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +44,8 @@
 		669492D924A7A5BE007B1ADA /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		669492DD24A7AF0B007B1ADA /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		669492DF24A7B6E9007B1ADA /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		66FB478E24B0EE4800B082C6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		74475AB6B37E89C6D7A3D0E2 /* Pods-Techcrus-Chat-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Techcrus-Chat-App.debug.xcconfig"; path = "Target Support Files/Pods-Techcrus-Chat-App/Pods-Techcrus-Chat-App.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB3EFDD09193554BB8CA492F /* Pods_Techcrus_Chat_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +65,8 @@
 			children = (
 				66205AEB249A63BC0010464E /* Techcrus-Chat-App */,
 				66205AEA249A63BC0010464E /* Products */,
+				AEEE5F8A86C900E3BB2EAA64 /* Pods */,
+				707D4095D7DE749AA3388F00 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,6 +87,7 @@
 				669492CC24A7A3CD007B1ADA /* Views */,
 				669492CB24A7A3C0007B1ADA /* Controllers */,
 				66205AFD249A63C10010464E /* Info.plist */,
+				66FB478E24B0EE4800B082C6 /* GoogleService-Info.plist */,
 				66205AF5249A63BC0010464E /* Techcrus_Chat_App.xcdatamodeld */,
 			);
 			path = "Techcrus-Chat-App";
@@ -147,6 +157,23 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		707D4095D7DE749AA3388F00 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				18C0D5DA5FC80102FDB031BE /* Pods_Techcrus_Chat_App.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AEEE5F8A86C900E3BB2EAA64 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				74475AB6B37E89C6D7A3D0E2 /* Pods-Techcrus-Chat-App.debug.xcconfig */,
+				215C80633103CAEFF8092EF5 /* Pods-Techcrus-Chat-App.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -154,9 +181,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 66205B00249A63C10010464E /* Build configuration list for PBXNativeTarget "Techcrus-Chat-App" */;
 			buildPhases = (
+				63159204FB673A7AA297C8C5 /* [CP] Check Pods Manifest.lock */,
 				66205AE5249A63BC0010464E /* Sources */,
 				66205AE6249A63BC0010464E /* Frameworks */,
 				66205AE7249A63BC0010464E /* Resources */,
+				70FA727FFA6AC2255BB5E21E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -206,12 +235,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				66205AFC249A63C10010464E /* LaunchScreen.storyboard in Resources */,
+				66FB478F24B0EE4900B082C6 /* GoogleService-Info.plist in Resources */,
 				66205AF9249A63C10010464E /* Assets.xcassets in Resources */,
 				66205AF4249A63BC0010464E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		63159204FB673A7AA297C8C5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Techcrus-Chat-App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		70FA727FFA6AC2255BB5E21E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Techcrus-Chat-App/Pods-Techcrus-Chat-App-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Techcrus-Chat-App/Pods-Techcrus-Chat-App-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Techcrus-Chat-App/Pods-Techcrus-Chat-App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		66205AE5249A63BC0010464E /* Sources */ = {
@@ -370,6 +442,7 @@
 		};
 		66205B01249A63C10010464E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74475AB6B37E89C6D7A3D0E2 /* Pods-Techcrus-Chat-App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -388,6 +461,7 @@
 		};
 		66205B02249A63C10010464E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 215C80633103CAEFF8092EF5 /* Pods-Techcrus-Chat-App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
