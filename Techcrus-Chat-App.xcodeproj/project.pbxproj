@@ -21,6 +21,7 @@
 		669492DA24A7A5BE007B1ADA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669492D924A7A5BE007B1ADA /* ProfileViewController.swift */; };
 		669492DE24A7AF0B007B1ADA /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669492DD24A7AF0B007B1ADA /* RegisterViewController.swift */; };
 		669492E024A7B6E9007B1ADA /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669492DF24A7B6E9007B1ADA /* Extensions.swift */; };
+		66D9CB5824C5F5FD00051FDB /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D9CB5724C5F5FD00051FDB /* DatabaseManager.swift */; };
 		66FB478F24B0EE4900B082C6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 66FB478E24B0EE4800B082C6 /* GoogleService-Info.plist */; };
 		CB3EFDD09193554BB8CA492F /* Pods_Techcrus_Chat_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18C0D5DA5FC80102FDB031BE /* Pods_Techcrus_Chat_App.framework */; };
 /* End PBXBuildFile section */
@@ -44,6 +45,7 @@
 		669492D924A7A5BE007B1ADA /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		669492DD24A7AF0B007B1ADA /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		669492DF24A7B6E9007B1ADA /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		66D9CB5724C5F5FD00051FDB /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		66FB478E24B0EE4800B082C6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		74475AB6B37E89C6D7A3D0E2 /* Pods-Techcrus-Chat-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Techcrus-Chat-App.debug.xcconfig"; path = "Target Support Files/Pods-Techcrus-Chat-App/Pods-Techcrus-Chat-App.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -153,6 +155,7 @@
 			children = (
 				669492D124A7A53F007B1ADA /* LoginViewController.swift */,
 				669492DD24A7AF0B007B1ADA /* RegisterViewController.swift */,
+				66D9CB5724C5F5FD00051FDB /* DatabaseManager.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 				66205AF7249A63BC0010464E /* Techcrus_Chat_App.xcdatamodeld in Sources */,
 				669492D224A7A53F007B1ADA /* LoginViewController.swift in Sources */,
 				669492DA24A7A5BE007B1ADA /* ProfileViewController.swift in Sources */,
+				66D9CB5824C5F5FD00051FDB /* DatabaseManager.swift in Sources */,
 				66205AEF249A63BC0010464E /* SceneDelegate.swift in Sources */,
 				669492E024A7B6E9007B1ADA /* Extensions.swift in Sources */,
 				669492D424A7A57B007B1ADA /* PhotoViewerViewController.swift in Sources */,
