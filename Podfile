@@ -9,6 +9,11 @@ pod 'Firebase/Core'
 pod 'Firebase/Auth'
 pod 'Firebase/Database'
 
+#Facebook
+pod 'FBSDKLoginKit'
+
+
   # Pods for Techcrus-Chat-App
+  
 
 end

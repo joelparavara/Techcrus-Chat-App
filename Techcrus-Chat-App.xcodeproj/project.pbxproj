@@ -111,8 +111,8 @@
 		669492CC24A7A3CD007B1ADA /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				66205AF8249A63C10010464E /* Assets.xcassets */,
 				669492D024A7A420007B1ADA /* Storyboards */,
+				66205AF8249A63C10010464E /* Assets.xcassets */,
 			);
 			path = Views;
 			sourceTree = "<group>";
