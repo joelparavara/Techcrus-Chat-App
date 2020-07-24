@@ -77,9 +77,11 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Log In"
-        view.backgroundColor = .white
+        view.backgroundColor = UIColor(red: 255/255, green: 99/255, blue: 99/255, alpha: 1)
+        navigationController?.navigationBar.barTintColor = UIColor(red: 235/255, green: 235/255, blue: 235/255, alpha: 1)
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Register", style: .done, target: self, action: #selector(didTapRegister))
+        navigationItem.rightBarButtonItem?.tintColor = UIColor(red: 255/255, green: 99/255, blue: 99/255, alpha: 1)
         
         facebookLogin.delegate = self
         

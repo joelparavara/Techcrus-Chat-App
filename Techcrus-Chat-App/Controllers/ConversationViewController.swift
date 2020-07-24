@@ -23,7 +23,7 @@ class ConversationViewController: UIViewController {
     }
     
     private func validateAuth(){
-        if Auth.auth().currentUser == nil {
+        if Auth.auth().currentUser?.email == nil {
             let vc = LoginViewController()
             let nav = UINavigationController(rootViewController: vc)
             nav.modalPresentationStyle = .fullScreen

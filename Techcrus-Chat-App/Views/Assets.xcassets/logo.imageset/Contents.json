@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "311ae20544ec4e5c6894971ef8aaeaf0.png",
+      "filename" : "tcicon.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "tcicon-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "tcicon-2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

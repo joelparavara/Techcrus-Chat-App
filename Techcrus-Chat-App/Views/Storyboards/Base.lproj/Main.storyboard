@@ -55,7 +55,7 @@
         <!--Chats-->
         <scene sceneID="meR-RY-9ct">
             <objects>
-                <viewController id="LMe-nx-kJO" sceneMemberID="viewController">
+                <viewController id="LMe-nx-kJO" customClass="ConversationViewController" customModule="Techcrus_Chat_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rc6-uW-UZs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

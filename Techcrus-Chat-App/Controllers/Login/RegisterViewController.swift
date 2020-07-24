@@ -6,6 +6,9 @@
 //  Copyright © 2020 Techcrus Labs. All rights reserved.
 //
 
+
+//Code to be commented 
+
 import UIKit
 import Firebase
 
@@ -19,11 +22,11 @@ class RegisterViewController: UIViewController {
     
     private let imageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(systemName: "person.circle")
-        imageView.tintColor = .gray
+        imageView.image = UIImage(systemName: "person")
+        imageView.tintColor = .white
         imageView.contentMode = .scaleAspectFit
-        imageView.layer.borderWidth = 2
-        imageView.layer.borderColor = UIColor.lightGray.cgColor
+        imageView.layer.borderWidth = 0
+        imageView.layer.borderColor = UIColor.white.cgColor
         imageView.layer.masksToBounds = true
         return imageView
     }()
@@ -104,7 +107,7 @@ class RegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Register"
-        view.backgroundColor = .white
+        view.backgroundColor = UIColor(red: 255/255, green: 99/255, blue: 99/255, alpha: 1)
         
         emailField.delegate = self
         passwordField.delegate = self
@@ -140,7 +143,7 @@ class RegisterViewController: UIViewController {
         
         let size = scrollView.width/3
         imageView.frame = CGRect(x: (scrollView.width-size)/2, y: 20, width: size, height: size)
-        imageView.layer.cornerRadius = imageView.width/2
+        //imageView.layer.cornerRadius = imageView.width/2
         
         firstNameField.frame = CGRect(x: 30, y: imageView.bottom + 10, width: scrollView.width-60, height: 52)
         lastNameField.frame = CGRect(x: 30, y: firstNameField.bottom + 10, width: scrollView.width-60, height: 52)
