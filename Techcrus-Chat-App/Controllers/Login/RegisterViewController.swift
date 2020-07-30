@@ -19,6 +19,8 @@
 
 //Wednessday - 29th
 
+//Thursday - 30th
+
 import UIKit
 import Firebase
 
