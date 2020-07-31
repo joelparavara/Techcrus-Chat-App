@@ -21,6 +21,8 @@
 
 //Thursday - 30th
 
+//Friday - 31st
+
 import UIKit
 import Firebase
 
