@@ -27,6 +27,8 @@
 
 //Sunday - 2nd Aug
 
+//Monday - 3rd Aug
+
 import UIKit
 import Firebase
 
