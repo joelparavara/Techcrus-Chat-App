@@ -189,6 +189,7 @@
 				66205AE6249A63BC0010464E /* Frameworks */,
 				66205AE7249A63BC0010464E /* Resources */,
 				70FA727FFA6AC2255BB5E21E /* [CP] Embed Pods Frameworks */,
+				53CF414E195A563B9FAFA4E5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -247,6 +248,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		53CF414E195A563B9FAFA4E5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Techcrus-Chat-App/Pods-Techcrus-Chat-App-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Techcrus-Chat-App/Pods-Techcrus-Chat-App-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Techcrus-Chat-App/Pods-Techcrus-Chat-App-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		63159204FB673A7AA297C8C5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

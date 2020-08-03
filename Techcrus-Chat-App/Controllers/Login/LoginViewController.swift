@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import FBSDKLoginKit
+import GoogleSignIn
 
 class LoginViewController: UIViewController {
     
@@ -23,6 +24,10 @@ class LoginViewController: UIViewController {
         btn.permissions = ["email, public_profile"]
         return btn
     }()
+    
+    private let googleLogin = GIDSignInButton()
+    
+    private var loginObserver: NSObjectProtocol?
     
     private let imageView: UIImageView = {
         let imageView = UIImageView()
@@ -76,6 +81,16 @@ class LoginViewController: UIViewController {
     //MARK:- ViewDidLoad Function Here
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        loginObserver = NotificationCenter.default.addObserver(forName: .didLoginNotiification, object: nil, queue: .main, using: { [weak self] _ in
+            guard let strongSelf = self else {
+                return
+            }
+            
+            strongSelf.navigationController?.dismiss(animated: true, completion: nil)
+        })
+        
+        GIDSignIn.sharedInstance()?.presentingViewController = self
         title = "Log In"
         view.backgroundColor = UIColor(red: 255/255, green: 99/255, blue: 99/255, alpha: 1)
         navigationController?.navigationBar.barTintColor = UIColor(red: 235/255, green: 235/255, blue: 235/255, alpha: 1)
@@ -95,8 +110,15 @@ class LoginViewController: UIViewController {
         scrollView.addSubview(passwordField)
         scrollView.addSubview(loginButton)
         scrollView.addSubview(facebookLogin)
+        scrollView.addSubview(googleLogin)
         facebookLogin.layer.cornerRadius = 12
         facebookLogin.layer.masksToBounds = true
+    }
+    
+    deinit {
+        if let observer = loginObserver {
+            NotificationCenter.default.removeObserver(observer)
+        }
     }
     
     //MARK:- ViewDidLayoutSubview Function Here
@@ -115,6 +137,8 @@ class LoginViewController: UIViewController {
         
         facebookLogin.center = scrollView.center
         facebookLogin.frame.origin.y = loginButton.bottom+20
+        
+        googleLogin.frame = CGRect(x: 30, y: facebookLogin.bottom + 10, width: facebookLogin.width-60, height: 52)
         
         loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
     }
