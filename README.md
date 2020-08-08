@@ -6,7 +6,7 @@
 - ❤️ Intuitive User Interface
 - 🔑 Simple Login / Register 
 - ⌛️ Real Time Chating 
-- 🎖 Part of [Techcrus Labs Initiative][techcrus]
+- 🎖 Part of [Techcrus Labs Initiative][techcrus]!
 - 👥 I’m looking to collaborate with other iOS/Flutter Developers
 
 <br />
@@ -21,13 +21,7 @@
 <br />
 
 ---
----
----
 
-<br />
-<!--
-<img align="left" alt="My Github Stats" src="https://github-readme-stats.codestackr.vercel.app/api?username=codeSTACKr&show_icons=true&hide_border=true" />
--->
-[github]: https://github.com/joelparavara
+[github]: https://github.com/joelparavara/
 [linkedin]: https://www.linkedin.com/in/joelofficial/
-[techcrus]: https://www.techcrus.com
+[techcrus]: https://www.techcrus.com/
