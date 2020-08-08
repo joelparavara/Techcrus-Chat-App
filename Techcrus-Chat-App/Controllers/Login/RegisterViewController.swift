@@ -33,10 +33,19 @@
 
 //Wednesday - 5th Aug
 
+//Thursday - 6th Aug
+
+//Friday - 7th Aug
+
+//Saturday - 8th Aug
+
 import UIKit
 import Firebase
+import JGProgressHUD
 
 class RegisterViewController: UIViewController {
+    
+    private let spinner = JGProgressHUD(style: .dark)
     
     private let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
@@ -130,8 +139,12 @@ class RegisterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let textAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        navigationController?.navigationBar.titleTextAttributes = textAttributes
+        
         title = "Register"
-        view.backgroundColor = UIColor(red: 255/255, green: 99/255, blue: 99/255, alpha: 1)
+        view.backgroundColor = .black//UIColor(red: 255/255, green: 99/255, blue: 99/255, alpha: 1)
         
         emailField.delegate = self
         passwordField.delegate = self
@@ -198,12 +211,18 @@ class RegisterViewController: UIViewController {
                  return
             }
         
+        spinner.show(in: view)
+        
         //FireBase Login
         DatabaseManager.shared.userExists(with: email, completion: { [weak self] exists in
             
             guard let strongSelf = self else {
-                               return
-                           }
+                return
+            }
+            
+            DispatchQueue.main.async {
+                strongSelf.spinner.dismiss()
+            }
             
             guard !exists else {
                 //User already Exists

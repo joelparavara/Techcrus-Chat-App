@@ -10,8 +10,11 @@ import UIKit
 import Firebase
 import FBSDKLoginKit
 import GoogleSignIn
+import JGProgressHUD
 
 class LoginViewController: UIViewController {
+    
+    private let spinner = JGProgressHUD(style: .dark)
     
     private let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
@@ -82,6 +85,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        ///Observer Setup
         loginObserver = NotificationCenter.default.addObserver(forName: .didLoginNotiification, object: nil, queue: .main, using: { [weak self] _ in
             guard let strongSelf = self else {
                 return
@@ -91,19 +95,29 @@ class LoginViewController: UIViewController {
         })
         
         GIDSignIn.sharedInstance()?.presentingViewController = self
-        title = "Log In"
-        view.backgroundColor = UIColor(red: 255/255, green: 99/255, blue: 99/255, alpha: 1)
-        navigationController?.navigationBar.barTintColor = UIColor(red: 235/255, green: 235/255, blue: 235/255, alpha: 1)
         
+        ///Navigation Title Attributes Setup
+        let textAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        navigationController?.navigationBar.titleTextAttributes = textAttributes
+        
+        ///Navigation Controller Color
+        navigationController?.navigationBar.barTintColor = .clear //UIColor(red: 235/255, green: 235/255, blue: 235/255, alpha: 1)
+        
+        ///View Color and Title Setup
+        title = "Log In"
+        view.backgroundColor = .black //UIColor(red: 255/255, green: 99/255, blue: 99/255, alpha: 1)
+        
+        
+        ///Navigation Item Setup
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Register", style: .done, target: self, action: #selector(didTapRegister))
         navigationItem.rightBarButtonItem?.tintColor = UIColor(red: 255/255, green: 99/255, blue: 99/255, alpha: 1)
         
+        ///Delegates Setup
         facebookLogin.delegate = self
-        
         emailField.delegate = self
         passwordField.delegate = self
         
-        //Add Subviews
+        ///Add Subviews
         view.addSubview(scrollView)
         scrollView.addSubview(imageView)
         scrollView.addSubview(emailField)
@@ -111,6 +125,7 @@ class LoginViewController: UIViewController {
         scrollView.addSubview(loginButton)
         scrollView.addSubview(facebookLogin)
         scrollView.addSubview(googleLogin)
+        
         facebookLogin.layer.cornerRadius = 12
         facebookLogin.layer.masksToBounds = true
     }
@@ -138,7 +153,7 @@ class LoginViewController: UIViewController {
         facebookLogin.center = scrollView.center
         facebookLogin.frame.origin.y = loginButton.bottom+20
         
-        googleLogin.frame = CGRect(x: 30, y: facebookLogin.bottom + 10, width: facebookLogin.width-60, height: 52)
+        googleLogin.frame = CGRect(x: 30, y: facebookLogin.bottom + 10, width: facebookLogin.width, height: 52)
         
         loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
     }
@@ -154,10 +169,17 @@ class LoginViewController: UIViewController {
             return
         }
         
+        ///Loading Spinner
+        spinner.show(in: view)
+        
         // Firebase LOGIN STARTS HERE
         Firebase.Auth.auth().signIn(withEmail: email, password: password, completion: { [weak self] authResults, error in
             guard let strongSelf = self else {
                 return
+            }
+            
+            DispatchQueue.main.async {
+                strongSelf.spinner.dismiss()
             }
             
             guard let results = authResults, error == nil else {
@@ -187,9 +209,8 @@ class LoginViewController: UIViewController {
         navigationController?.pushViewController(vc, animated: true)
     }
     
-    
-    
 }
+
 //MARK:- Advanced Text Field Extension
 extension LoginViewController : UITextFieldDelegate {
     

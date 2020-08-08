@@ -15,6 +15,11 @@ pod 'FBSDKLoginKit'
 #Google Sign In
 pod 'GoogleSignIn'
 
+pod 'MessageKit'
+pod 'JGProgressHUD'
+pod 'MessageKit'
+pod 'RealmSwift'
+pod 'SDWebImage'
 
   # Pods for Techcrus-Chat-App
   

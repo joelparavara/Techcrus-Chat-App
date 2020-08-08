@@ -56,11 +56,10 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
             }
             
             //Logout Facebook
-
             FBSDKLoginKit.LoginManager().logOut()
             
             //Google Lout out
-            GIDSignIn.sharedInstance()?.signOut()
+            GIDSignIn.sharedInstance().signOut()
             
             do {
                 try Auth.auth().signOut()
