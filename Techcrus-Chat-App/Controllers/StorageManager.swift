@@ -38,9 +38,9 @@ final class StorageManager {
                     return
                 }
                 
-                //let urlString = 
-                print("Download URL returned: \(urlString)")
-                completion(.success(urlString))
+                //let urlString =
+                //print("Download URL returned: \(urlString)")
+                //completion(.success(urlString))
             })
         })
     }
