@@ -14,6 +14,7 @@
 		66205AF7249A63BC0010464E /* Techcrus_Chat_App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 66205AF5249A63BC0010464E /* Techcrus_Chat_App.xcdatamodeld */; };
 		66205AF9249A63C10010464E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66205AF8249A63C10010464E /* Assets.xcassets */; };
 		66205AFC249A63C10010464E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66205AFA249A63C10010464E /* LaunchScreen.storyboard */; };
+		668B95FF24E1CDFF00827F9B /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668B95FE24E1CDFF00827F9B /* StorageManager.swift */; };
 		669492D224A7A53F007B1ADA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669492D124A7A53F007B1ADA /* LoginViewController.swift */; };
 		669492D424A7A57B007B1ADA /* PhotoViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669492D324A7A57B007B1ADA /* PhotoViewerViewController.swift */; };
 		669492D624A7A58A007B1ADA /* VideoViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669492D524A7A58A007B1ADA /* VideoViewerViewController.swift */; };
@@ -39,6 +40,7 @@
 		66205AF8249A63C10010464E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66205AFB249A63C10010464E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		66205AFD249A63C10010464E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		668B95FE24E1CDFF00827F9B /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		669492D124A7A53F007B1ADA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		669492D324A7A57B007B1ADA /* PhotoViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewerViewController.swift; sourceTree = "<group>"; };
 		669492D524A7A58A007B1ADA /* VideoViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewerViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				669492D524A7A58A007B1ADA /* VideoViewerViewController.swift */,
 				669492D724A7A5B5007B1ADA /* NewConversationViewController.swift */,
 				669492D924A7A5BE007B1ADA /* ProfileViewController.swift */,
+				668B95FE24E1CDFF00827F9B /* StorageManager.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				66205AF1249A63BC0010464E /* ConversationViewController.swift in Sources */,
 				669492DE24A7AF0B007B1ADA /* RegisterViewController.swift in Sources */,
 				669492D624A7A58A007B1ADA /* VideoViewerViewController.swift in Sources */,
+				668B95FF24E1CDFF00827F9B /* StorageManager.swift in Sources */,
 				669492D824A7A5B5007B1ADA /* NewConversationViewController.swift in Sources */,
 				66205AED249A63BC0010464E /* AppDelegate.swift in Sources */,
 				66205AF7249A63BC0010464E /* Techcrus_Chat_App.xcdatamodeld in Sources */,
