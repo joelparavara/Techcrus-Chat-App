@@ -31,16 +31,16 @@ final class StorageManager {
                 return
             }
             
-            self.storage.child("images/\(filename)").putData(data, metadata: nil, completion: { url, error in
+            self.storage.child("images/\(filename)").downloadURL(completion: { url, error in
                 guard let url = url else {
-                    print("Failed to get url")
+                    print("Failed to get download URL")
                     completion(.failure(StorageErrors.failedToGetDownloadURL))
                     return
                 }
                 
-                //let urlString =
-                //print("Download URL returned: \(urlString)")
-                //completion(.success(urlString))
+                let urlString = url.absoluteString
+                print("download url returned: \(urlString)")
+                completion(.success(urlString))
             })
         })
     }

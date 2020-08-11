@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import FirebaseAuth
 import FBSDKLoginKit
 import GoogleSignIn
 import JGProgressHUD
@@ -173,7 +174,7 @@ class LoginViewController: UIViewController {
         spinner.show(in: view)
         
         // Firebase LOGIN STARTS HERE
-        Firebase.Auth.auth().signIn(withEmail: email, password: password, completion: { [weak self] authResults, error in
+        FirebaseAuth.Auth.auth().signIn(withEmail: email, password: password, completion: { [weak self] authResults, error in
             guard let strongSelf = self else {
                 return
             }
@@ -272,7 +273,13 @@ extension LoginViewController: LoginButtonDelegate {
             //FIXME: Clean the Code Here
             DatabaseManager.shared.userExists(with: email, completion: { exists in
                 if !exists {
-                    DatabaseManager.shared.insertUser(with: ChatAppUser(firstName: firstName, lastName: lastName, emailAddress: email))
+                    let chatUser = ChatAppUser(firstName: firstName, lastName: lastName, emailAddress: email)
+                    DatabaseManager.shared.insertUser(with: chatUser, completion: { success in
+                        if success {
+                            //Upload Image
+                        }
+                        
+                    })
                 }
             })
             

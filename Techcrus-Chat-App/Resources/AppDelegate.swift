@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import Firebase
+import FirebaseAuth
 import FBSDKCoreKit
 import GoogleSignIn
 
@@ -20,7 +21,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         FirebaseApp.configure()
-        
         
         ApplicationDelegate.shared.application(
             application,
@@ -73,7 +73,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         DatabaseManager.shared.userExists(with: email, completion: { exists in
             if !exists {
                 //MARK:-Insert User into Database
-                DatabaseManager.shared.insertUser(with: ChatAppUser(firstName: firstname, lastName: lastName, emailAddress: email))
+                let chatUser = ChatAppUser(firstName: firstname, lastName: lastName, emailAddress: email)
+                DatabaseManager.shared.insertUser(with: chatUser, completion: { success in
+                    if success {
+                        //upload Image
+                    }
+                })
             }
         })
         
