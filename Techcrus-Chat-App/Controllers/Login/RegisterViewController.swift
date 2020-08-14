@@ -242,6 +242,7 @@ class RegisterViewController: UIViewController {
                 DatabaseManager.shared.insertUser(with: chatUser, completion: { success in
                     if success {
                         //Upload Image
+                        // Comment to test
                         guard let image = strongSelf.imageView.image,
                             let data = image.pngData() else {
                             return
