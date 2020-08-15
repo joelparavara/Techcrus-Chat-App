@@ -243,6 +243,7 @@ class RegisterViewController: UIViewController {
                     if success {
                         //Upload Image
                         // Comment to test
+                        //Date Commit
                         guard let image = strongSelf.imageView.image,
                             let data = image.pngData() else {
                             return
