@@ -109,7 +109,6 @@
 				669492D524A7A58A007B1ADA /* VideoViewerViewController.swift */,
 				669492D724A7A5B5007B1ADA /* NewConversationViewController.swift */,
 				669492D924A7A5BE007B1ADA /* ProfileViewController.swift */,
-				668B95FE24E1CDFF00827F9B /* StorageManager.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -143,6 +142,8 @@
 				66205AEC249A63BC0010464E /* AppDelegate.swift */,
 				66205AEE249A63BC0010464E /* SceneDelegate.swift */,
 				669492DF24A7B6E9007B1ADA /* Extensions.swift */,
+				66D9CB5724C5F5FD00051FDB /* DatabaseManager.swift */,
+				668B95FE24E1CDFF00827F9B /* StorageManager.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -161,7 +162,6 @@
 			children = (
 				669492D124A7A53F007B1ADA /* LoginViewController.swift */,
 				669492DD24A7AF0B007B1ADA /* RegisterViewController.swift */,
-				66D9CB5724C5F5FD00051FDB /* DatabaseManager.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";

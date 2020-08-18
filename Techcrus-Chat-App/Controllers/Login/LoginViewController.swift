@@ -245,7 +245,7 @@ extension LoginViewController: LoginButtonDelegate {
         }
         
         //MARK: Setup Facebook Request with GraphRequest from FBSDKLoginKit
-        let facebookRequest = FBSDKLoginKit.GraphRequest(graphPath: "me", parameters: ["fields": "email, name"], tokenString: token, version: nil, httpMethod: .get)
+        let facebookRequest = FBSDKLoginKit.GraphRequest(graphPath: "me", parameters: ["fields": "email, first_name, last_name, picture.type(large)"], tokenString: token, version: nil, httpMethod: .get)
         
         //MARK: Start FB Request with
         facebookRequest.start(completionHandler: {_, result, error in
@@ -254,31 +254,60 @@ extension LoginViewController: LoginButtonDelegate {
                 return
             }
             
+            print(result)
+            
             //MARK: Saving data from Result Array given by Token
             print("\(result)")
-            guard let userName = result["name"] as? String,
-                let email = result["email"] as? String else {
+            guard let firstName = result["first_name"] as? String,
+                let lastName = result["last_name"] as? String,
+                let email = result["email"] as? String,
+                let picture = result["picture"] as? [String : Any],
+                let data = picture["data"] as? [String : Any],
+                let pictureUrl = data["url"] as? String else {
                     print("Failed to get email and name from fb results")
                     return
             }
-            //MARK: Seperating First Name and Last Name
-            let nameComponents = userName.components(separatedBy: " ")
-            guard nameComponents.count == 2 else {
-                return
-            }
-            let firstName = nameComponents[0]
-            let lastName = nameComponents[1]
             
-            //MARK: Inserting Facebook user into Firebase Database
+            //MARK: Inserting Facebook user into Firebase Database & Profile Image Saving
             //FIXME: Clean the Code Here
             DatabaseManager.shared.userExists(with: email, completion: { exists in
                 if !exists {
-                    let chatUser = ChatAppUser(firstName: firstName, lastName: lastName, emailAddress: email)
+                    let chatUser = ChatAppUser(firstName: firstName,
+                                               lastName: lastName,
+                                               emailAddress: email)
+                    
                     DatabaseManager.shared.insertUser(with: chatUser, completion: { success in
                         if success {
-                            //Upload Image
+                            //Unwraping url
+                            guard let url = URL(string: pictureUrl) else {
+                                return
+                            }
+                            
+                            print("Downloading Data from FB")
+                            
+                            //Download Image
+                            URLSession.shared.dataTask(with: pictureUrl, completionHandler: { data, _, error in
+                                guard let data = data else {
+                                    print("Failed to get Data from FB")
+                                    return
+                                }
+                                
+                                print("Got Data from FB.. uploading")
+                                
+                                //Upload Image
+
+                                let filename = chatUser.profilePictureFileName
+                                StorageManager.shared.uploadProfilePicture(with: data, filename: filename, completion: { result in
+                                    switch result {
+                                    case .success(let downloadUrl):
+                                        UserDefaults.standard.set(downloadUrl, forKey: "profile_picture_url")
+                                        print(downloadUrl)
+                                    case .failure(let error):
+                                        print("Storage Manager error \(error)")
+                                    }
+                                })
+                            }).resume()
                         }
-                        
                     })
                 }
             })
