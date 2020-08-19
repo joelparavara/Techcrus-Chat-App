@@ -279,6 +279,7 @@ extension LoginViewController: LoginButtonDelegate {
                     DatabaseManager.shared.insertUser(with: chatUser, completion: { success in
                         if success {
                             //Unwraping url
+                            // Data
                             guard let url = URL(string: pictureUrl) else {
                                 return
                             }
