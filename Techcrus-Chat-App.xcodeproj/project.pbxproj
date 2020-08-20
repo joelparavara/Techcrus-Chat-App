@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -25,12 +25,12 @@
 		66D9CAA524DC868400F98FB3 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D9CAA424DC868400F98FB3 /* ChatViewController.swift */; };
 		66D9CB5824C5F5FD00051FDB /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D9CB5724C5F5FD00051FDB /* DatabaseManager.swift */; };
 		66FB478F24B0EE4900B082C6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 66FB478E24B0EE4800B082C6 /* GoogleService-Info.plist */; };
-		CB3EFDD09193554BB8CA492F /* Pods_Techcrus_Chat_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18C0D5DA5FC80102FDB031BE /* Pods_Techcrus_Chat_App.framework */; };
+		D9580438AE2793FDCC99009E /* Pods_Techcrus_Chat_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56104BF702A818DCCB038FAE /* Pods_Techcrus_Chat_App.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		18C0D5DA5FC80102FDB031BE /* Pods_Techcrus_Chat_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Techcrus_Chat_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		215C80633103CAEFF8092EF5 /* Pods-Techcrus-Chat-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Techcrus-Chat-App.release.xcconfig"; path = "Target Support Files/Pods-Techcrus-Chat-App/Pods-Techcrus-Chat-App.release.xcconfig"; sourceTree = "<group>"; };
+		56104BF702A818DCCB038FAE /* Pods_Techcrus_Chat_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Techcrus_Chat_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C3B7A56F8525D4081D0DA3C /* Pods-Techcrus-Chat-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Techcrus-Chat-App.debug.xcconfig"; path = "Target Support Files/Pods-Techcrus-Chat-App/Pods-Techcrus-Chat-App.debug.xcconfig"; sourceTree = "<group>"; };
 		66205AE9249A63BC0010464E /* Techcrus-Chat-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Techcrus-Chat-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		66205AEC249A63BC0010464E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66205AEE249A63BC0010464E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,7 +51,7 @@
 		66D9CAA424DC868400F98FB3 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		66D9CB5724C5F5FD00051FDB /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		66FB478E24B0EE4800B082C6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		74475AB6B37E89C6D7A3D0E2 /* Pods-Techcrus-Chat-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Techcrus-Chat-App.debug.xcconfig"; path = "Target Support Files/Pods-Techcrus-Chat-App/Pods-Techcrus-Chat-App.debug.xcconfig"; sourceTree = "<group>"; };
+		732D65A6CCD28C38F40805B4 /* Pods-Techcrus-Chat-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Techcrus-Chat-App.release.xcconfig"; path = "Target Support Files/Pods-Techcrus-Chat-App/Pods-Techcrus-Chat-App.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,20 +59,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB3EFDD09193554BB8CA492F /* Pods_Techcrus_Chat_App.framework in Frameworks */,
+				D9580438AE2793FDCC99009E /* Pods_Techcrus_Chat_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		12E3E992720DD03525F03EB5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				56104BF702A818DCCB038FAE /* Pods_Techcrus_Chat_App.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		66205AE0249A63BC0010464E = {
 			isa = PBXGroup;
 			children = (
 				66205AEB249A63BC0010464E /* Techcrus-Chat-App */,
 				66205AEA249A63BC0010464E /* Products */,
-				AEEE5F8A86C900E3BB2EAA64 /* Pods */,
-				707D4095D7DE749AA3388F00 /* Frameworks */,
+				81E451C51791F681224D0FD2 /* Pods */,
+				12E3E992720DD03525F03EB5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -166,20 +174,13 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
-		707D4095D7DE749AA3388F00 /* Frameworks */ = {
+		81E451C51791F681224D0FD2 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				18C0D5DA5FC80102FDB031BE /* Pods_Techcrus_Chat_App.framework */,
+				5C3B7A56F8525D4081D0DA3C /* Pods-Techcrus-Chat-App.debug.xcconfig */,
+				732D65A6CCD28C38F40805B4 /* Pods-Techcrus-Chat-App.release.xcconfig */,
 			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		AEEE5F8A86C900E3BB2EAA64 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				74475AB6B37E89C6D7A3D0E2 /* Pods-Techcrus-Chat-App.debug.xcconfig */,
-				215C80633103CAEFF8092EF5 /* Pods-Techcrus-Chat-App.release.xcconfig */,
-			);
+			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -190,12 +191,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 66205B00249A63C10010464E /* Build configuration list for PBXNativeTarget "Techcrus-Chat-App" */;
 			buildPhases = (
-				63159204FB673A7AA297C8C5 /* [CP] Check Pods Manifest.lock */,
+				53309E9F24BCD30CB0D96B9E /* [CP] Check Pods Manifest.lock */,
 				66205AE5249A63BC0010464E /* Sources */,
 				66205AE6249A63BC0010464E /* Frameworks */,
 				66205AE7249A63BC0010464E /* Resources */,
-				70FA727FFA6AC2255BB5E21E /* [CP] Embed Pods Frameworks */,
-				53CF414E195A563B9FAFA4E5 /* [CP] Copy Pods Resources */,
+				554E91EA32B74FA11C028B77 /* [CP] Embed Pods Frameworks */,
+				A2E4F05E57B7E3F7F1ED0C99 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -254,24 +255,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		53CF414E195A563B9FAFA4E5 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Techcrus-Chat-App/Pods-Techcrus-Chat-App-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Techcrus-Chat-App/Pods-Techcrus-Chat-App-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Techcrus-Chat-App/Pods-Techcrus-Chat-App-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		63159204FB673A7AA297C8C5 /* [CP] Check Pods Manifest.lock */ = {
+		53309E9F24BCD30CB0D96B9E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -293,7 +277,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		70FA727FFA6AC2255BB5E21E /* [CP] Embed Pods Frameworks */ = {
+		554E91EA32B74FA11C028B77 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -308,6 +292,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Techcrus-Chat-App/Pods-Techcrus-Chat-App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A2E4F05E57B7E3F7F1ED0C99 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Techcrus-Chat-App/Pods-Techcrus-Chat-App-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Techcrus-Chat-App/Pods-Techcrus-Chat-App-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Techcrus-Chat-App/Pods-Techcrus-Chat-App-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -472,7 +473,7 @@
 		};
 		66205B01249A63C10010464E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 74475AB6B37E89C6D7A3D0E2 /* Pods-Techcrus-Chat-App.debug.xcconfig */;
+			baseConfigurationReference = 5C3B7A56F8525D4081D0DA3C /* Pods-Techcrus-Chat-App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -491,7 +492,7 @@
 		};
 		66205B02249A63C10010464E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 215C80633103CAEFF8092EF5 /* Pods-Techcrus-Chat-App.release.xcconfig */;
+			baseConfigurationReference = 732D65A6CCD28C38F40805B4 /* Pods-Techcrus-Chat-App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

@@ -287,7 +287,7 @@ extension LoginViewController: LoginButtonDelegate {
                             print("Downloading Data from FB")
                             
                             //Download Image
-                            URLSession.shared.dataTask(with: pictureUrl, completionHandler: { data, _, error in
+                            URLSession.shared.dataTask(with: url, completionHandler: { data, _, error in
                                 guard let data = data else {
                                     print("Failed to get Data from FB")
                                     return
@@ -307,7 +307,7 @@ extension LoginViewController: LoginButtonDelegate {
                                         print("Storage Manager error \(error)")
                                     }
                                 })
-                            }).resume()
+                                }).resume()
                         }
                     })
                 }
